@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Download video dari TikTok, Instagram, YouTube, Facebook, dan X gratis. Cepat, mudah, tanpa ribet.">
+  <meta name="theme-color" content="#FFD600">
+  <title>AIODOWNLOADERbyjar — Download Video Semua Platform</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Toast Container -->
+  <div id="toast-container" aria-live="polite" aria-atomic="false"></div>
+
+  <!-- ================================
+       NAVBAR
+  ================================ -->
+  <nav class="navbar" role="navigation" aria-label="Main navigation">
+    <div class="container navbar-inner">
+      <a href="#" class="logo" aria-label="AIODOWNLOADERbyjar - Kembali ke atas">
+        <span class="logo-main">AIODOWNLOADER</span><span class="logo-sub">byjar</span>
+      </a>
+      <div class="nav-links">
+        <a href="#downloader" class="nav-link">Download</a>
+        <a href="#features" class="nav-link">Fitur</a>
+        <a href="#faq" class="nav-link">FAQ</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ================================
+       HERO SECTION
+  ================================ -->
+  <section class="hero" id="home" aria-label="Hero">
+    <div class="hero-decor hero-decor-sq-yellow" aria-hidden="true"></div>
+    <div class="hero-decor hero-decor-circle-pink" aria-hidden="true"></div>
+    <div class="hero-decor hero-decor-sq-green" aria-hidden="true"></div>
+    <div class="hero-decor hero-decor-circle-blue" aria-hidden="true"></div>
+    <div class="hero-decor hero-decor-sq-white" aria-hidden="true"></div>
+
+    <div class="container hero-inner">
+      <div class="hero-content">
+        <div class="hero-badge" aria-label="Badge: Download Semua Platform">
+          <span aria-hidden="true">🚀</span> Download Semua Platform
+        </div>
+        <h1 class="hero-title">
+          Downloader<br>
+          untuk <mark class="hero-mark">All</mark><br>
+          In One
+        </h1>
+        <p class="hero-sub">
+          TikTok, Instagram, YouTube, Facebook, X Donlot pideo gratis tampa batas coiiii, ini punya pajarr anjaayy.
+        </p>
+        <a href="#downloader" class="btn btn-primary btn-hero">
+          Mulai Download <span aria-hidden="true">↓</span>
+        </a>
+      </div>
+
+      <div class="hero-visual" aria-hidden="true">
+        <div class="hero-platform-grid">
+          <div class="hpg-card hpg-yellow">
+            <span class="hpg-emoji">🎵</span>
+            <span class="hpg-name">TikTok</span>
+          </div>
+          <div class="hpg-card hpg-blue">
+            <span class="hpg-emoji">📸</span>
+            <span class="hpg-name">Instagram</span>
+          </div>
+          <div class="hpg-card hpg-green">
+            <span class="hpg-emoji">▶️</span>
+            <span class="hpg-name">YouTube</span>
+          </div>
+          <div class="hpg-card hpg-pink">
+            <span class="hpg-emoji">👤</span>
+            <span class="hpg-name">Facebook</span>
+          </div>
+          <div class="hpg-card hpg-white">
+            <span class="hpg-emoji">𝕏</span>
+            <span class="hpg-name">Twitter</span>
+          </div>
+          <div class="hpg-card hpg-black">
+            <span class="hpg-emoji">⬇️</span>
+            <span class="hpg-name">Download</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================
+       DOWNLOADER SECTION
+  ================================ -->
+  <section class="downloader-section" id="downloader" aria-label="Downloader">
+    <div class="container">
+      <div class="downloader-card">
+        <div class="downloader-header">
+          <h2 class="downloader-title">Download Video</h2>
+          <p class="downloader-sub">Paste URL di bawah ini ya pedo, lalu klik donlot.</p>
+        </div>
+
+        <div class="downloader-form" role="form" aria-label="Form download video">
+          <div class="input-wrapper" id="input-wrapper">
+            <span class="input-icon" aria-hidden="true">🔗</span>
+            <input
+              type="url"
+              id="url-input"
+              class="url-input"
+              placeholder="https://www.tiktok.com/@user/video/..."
+              autocomplete="off"
+              autocorrect="off"
+              autocapitalize="off"
+              spellcheck="false"
+              aria-label="Masukkan URL video"
+            >
+            <button id="btn-paste" class="btn-paste" type="button" aria-label="Paste URL dari clipboard">
+              📋 Paste
+            </button>
+          </div>
+
+          <div class="platform-indicator" id="platform-indicator" aria-live="polite"></div>
+
+          <button id="btn-download" class="btn btn-primary btn-download" type="button" aria-label="Mulai download">
+            <span class="btn-text" aria-hidden="false">⬇️&nbsp; Do
+Donlot Sekarang cik</span>
+            <span class="btn-loading" aria-hidden="true">
+              <span class="spinner"></span>
+              Memproses...
+            </span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================
+       RESULT SECTION
+  ================================ -->
+  <section class="result-section" id="result-section" style="display:none;" aria-label="Hasil download" aria-live="polite">
+    <div class="container">
+      <div class="result-card">
+        <div class="result-header">
+          <div class="result-status">
+            <span class="result-status-icon" aria-hidden="true">✅</span>
+            <div>
+              <div class="result-status-label">Link Siap!</div>
+              <div class="result-platform-badge" id="result-platform">—</div>
+            </div>
+          </div>
+          <button id="btn-download-again" class="btn btn-ghost" type="button" aria-label="Download video lain">
+            🔄 Download Lagi
+          </button>
+        </div>
+
+        <!-- Download Actions — rendered by JS -->
+        <div class="result-actions" id="result-actions" role="list" aria-label="Pilihan download"></div>
+
+        <!-- Photo Gallery — shown only when photo[] has data -->
+        <div class="photo-gallery-section" id="photo-gallery-section" style="display:none;">
+          <h3 class="gallery-title">📷 Galeri Foto</h3>
+          <div class="photo-grid" id="photo-grid" role="list" aria-label="Galeri foto"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================
+       FEATURES SECTION
+  ================================ -->
+  <section class="features-section" id="features" aria-label="Fitur unggulan">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-badge">✨ Fitur Unggulan</div>
+        <h2 class="section-title">Naoa AIODOWNLOADER?</h2>
+      </div>
+      <div class="features-grid">
+        <div class="feature-card fc-white">
+          <div class="feature-icon" aria-hidden="true">⚡</div>
+          <h3 class="feature-title">Super Cepat Jes Jess</h3>
+          <p class="feature-desc">Cepet bangett jjrrrrr</p>
+        </div>
+        <div class="feature-card fc-yellow">
+          <div class="feature-icon" aria-hidden="true">🌐</div>
+          <h3 class="feature-title">Multi Platform</h3>
+          <p class="feature-desc">TikTok, Instagram, YouTube, Facebook, X  semua bisa didownload dri satu tempat.</p>
+        </div>
+        <div class="feature-card fc-blue">
+          <div class="feature-icon" aria-hidden="true">🎬</div>
+          <h3 class="feature-title">Kualitas HD</h3>
+          <p class="feature-desc">Donlot pideo resolusi tinggi. Pilih kualitas standar atau HD sesuai kebutuhan.</p>
+        </div>
+        <div class="feature-card fc-green">
+          <div class="feature-icon" aria-hidden="true">🎵</div>
+          <h3 class="feature-title">Ekstrak Audio</h3>
+          <p class="feature-desc">Butuh lagunya saja? Download audio berkualitas tinggi langsung dari video.</p>
+        </div>
+        <div class="feature-card fc-pink">
+          <div class="feature-icon" aria-hidden="true">📷</div>
+          <h3 class="feature-title">Galeri Foto</h3>
+          <p class="feature-desc">Unduh seluruh foto dari postingan carousel Instagram sekaligus dalam satu klik.</p>
+        </div>
+        <div class="feature-card fc-white">
+          <div class="feature-icon" aria-hidden="true">🆓</div>
+          <h3 class="feature-title">100% Gratis</h3>
+          <p class="feature-desc">INI GA BAYAR YA KONTOL, LU YANG BILANG KALO INI BAYAR,  LUPEDOAMAT</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================
+       FAQ SECTION
+  ================================ -->
+  <section class="faq-section" id="faq" aria-label="Pertanyaan yang sering ditanyakan">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-badge sb-pink">❓ FAQ</div>
+        <h2 class="section-title faq-title">Pertanyaan Umum</h2>
+      </div>
+      <div class="faq-list" role="list">
+
+        <div class="faq-item" role="listitem">
+          <button class="faq-question" aria-expanded="false" type="button">
+            <span>Platform apa saja yang didukung?</span>
+            <span class="faq-icon" aria-hidden="true">+</span>
+          </button>
+          <div class="faq-answer" role="region">
+            <p>AIODOWNLOADER mendukung TikTok, Instagram (video, reels, stories, foto carousel), YouTube, YouTube Shorts, Facebook, dan X / Twitter. Tinggal paste url trus duarr dapet menu video hd dll.</p>
+          </div>
+        </div>
+
+        <div class="faq-item" role="listitem">
+          <button class="faq-question" aria-expanded="false" type="button">
+            <span>Apakah benar-benar gratis?</span>
+            <span class="faq-icon" aria-hidden="true">+</span>
+          </button>
+          <div class="faq-answer" role="region">
+            <p>Ya, 100% gratis. ya kontol yang bilang ini ada biaya, lu tolol banget sih anjing.</p>
+          </div>
+        </div>
+
+        <div class="faq-item" role="listitem">
+          <button class="faq-question" aria-expanded="false" type="button">
+            <span>Kenapa URL saya tidak bisa diproses?</span>
+            <span class="faq-icon" aria-hidden="true">+</span>
+          </button>
+          <div class="faq-answer" role="region">
+            <p>Klo gue kagak tau.</p>
+          </div>
+        </div>
+
+        <div class="faq-item" role="listitem">
+          <button class="faq-question" aria-expanded="false" type="button">
+            <span>Bisa download audio saja tanpa video?</span>
+            <span class="faq-icon" aria-hidden="true">+</span>
+          </button>
+          <div class="faq-answer" role="region">
+            <p>Gatau lah, cobain dlu deh.</p>
+          </div>
+        </div>
+
+        <div class="faq-item" role="listitem">
+          <button class="faq-question" aria-expanded="false" type="button">
+            <span>Apakah ada watermark di video yang diunduh?</span>
+            <span class="faq-icon" aria-hidden="true">+</span>
+          </button>
+          <div class="faq-answer" role="region">
+            <p>Gd.</p>
+          </div>
+        </div>
+
+        <div class="faq-item" role="listitem">
+          <button class="faq-question" aria-expanded="false" type="button">
+            <span>Tombol download membuka tab baru, bukan mendownload?</span>
+            <span class="faq-icon" aria-hidden="true">+</span>
+          </button>
+          <div class="faq-answer" role="region">
+            <p>Normal inimah, kalo ga ke download otomatis, coba pencet titik 3 lalu unduh di tab yang baru.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================
+       FOOTER
+  ================================ -->
+  <footer class="footer" role="contentinfo">
+    <div class="container footer-inner">
+      <div class="footer-top">
+        <a href="#" class="logo footer-logo" aria-label="AIODOWNLOADERbyjar">
+          <span class="logo-main">AIODOWNLOADER</span><span class="logo-sub">byjar</span>
+        </a>
+        <p class="footer-tagline">Download video dari semua platform.<br>Gratis anjayyy.</p>
+      </div>
+      <div class="footer-divider"></div>
+      <div class="footer-bottom">
+        <p class="footer-copy">© 2026 <strong>PAJARDEP</strong>. All rights reserved.</p>
+        <p class="footer-powered">Powered by <a href="Pajar api" target="_blank" rel="noopener noreferrer" class="footer-link">private API</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
